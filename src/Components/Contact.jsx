@@ -17,7 +17,7 @@ const Contact = () => {
         try {
             setLoading(true);
             await axios.post(
-                "http://localhost:8080/api/send",
+                "https://pritam-portfolio-backend.onrender.com/api/send",
 
                 {
                     name,
