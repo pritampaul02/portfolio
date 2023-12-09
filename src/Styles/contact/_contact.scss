@@ -1,0 +1,154 @@
+#contact {
+    padding: 4rem 0;
+    padding-inline: var(--padding-inline-xl);
+    overflow-x: hidden;
+
+    @media screen and (max-width:450px) {
+        padding: 2rem 0;
+        padding-inline: var(--padding-inline-sm);
+    }
+
+    h2.heading {
+        color: var(--dark-sky);
+        font-size: 2.5rem;
+        text-align: left;
+        font-weight: 600;
+        display: inline-block;
+        position: relative;
+        font-family: var(--text1);
+
+        &::before {
+            content: ' ';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: 10px;
+            left: 0;
+            background-color: var(--dark-sky);
+        }
+
+        @media screen and (max-width:450px) {
+            font-size: 2.3rem;
+            font-weight: 500;
+
+            &::before {
+                bottom: 5px;
+            }
+        }
+
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: row;
+        gap: 8rem;
+        padding-top: 2.5rem;
+        width: 100% !important;
+
+        @media screen and (max-width:450px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        aside {
+
+            // width: 20rem;
+            img {
+                width: 30rem;
+
+                @media screen and (max-width:450px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        main {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 3rem 0 0;
+            // justify-self: right;
+
+            @media screen and (max-width:450px) {
+                padding: 0;
+                justify-content: flex-start;
+
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 0.8rem;
+
+                @media screen and (max-width:450px) {
+                    width: 100%;
+                }
+
+                input,
+                button {
+                    width: 35rem;
+
+                    @media screen and (max-width:450px) {
+                        width: 100%;
+                    }
+
+                }
+
+                input {
+                    height: 3rem;
+                }
+
+                input,
+                textarea {
+                    clear: both;
+                    border: 2px solid var(--dark-sky);
+                    outline: none;
+                    border-radius: 5px;
+                    padding: var(--padding-inline-sm);
+                    font-size: 1.1rem;
+                    color: var(--white);
+                    font-weight: 500;
+                    background-color: transparent;
+                }
+
+                textarea {
+                    resize: none;
+                    height: 10rem;
+                }
+
+                button {
+                    // background-color: var(--dark-sky);
+                    margin-top: 0.5rem;
+                    background-color: var(--dark-sky);
+                    color: var(--dark-blue);
+                    border-radius: 7px;
+                    padding: 0.7rem 1rem;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    border: px solid var(--dark-sky);
+                    outline: none;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        // background-color: var(--light-blue_2);
+                        // border: 3px solid var(--light-blue_2);
+                        box-shadow: 0px 0px 4px var(--dark-sky-shadow-alpha),
+                            0px 0px 8px var(--dark-sky-shadow-alpha),
+                            0px 0px 15px var(--dark-sky-shadow-alpha), ;
+                        background-color: var(--dark-blue);
+                        color: var(--white);
+                    }
+
+                    &.disabledSubmit {
+                        cursor: not-allowed;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+}

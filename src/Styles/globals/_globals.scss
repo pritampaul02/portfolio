@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*::selection {
+    color: var(--dark-blue);
+    background: var(--dark-sky);
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 4px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--light-blue_2-shadow-alpha);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--dark-blue-alpha);
+    border-radius: 4px
+}
+
+// *::-webkit-scrollbar-thumb:hover {
+//     background: var(--dark-blue);
+// }
+
+
+body {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div#root {
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+// Theme button designs are implemented hare 
+
+.btnContainer {
+    cursor: pointer;
+    margin-top: 2rem;
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    @media screen and (max-width:450px) {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+.btn {
+    color: var(--dark-sky);
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--text2);
+    padding: 0.8rem 3.5rem;
+    border: 2px solid var(--dark-sky);
+    border-radius: 0.6rem;
+
+    @media screen and (max-width:450px) {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+.btn-orange {
+    color: var(--orange);
+    border: 2px solid var(--orange);
+}
+
+.btnBack_animation {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        background-color: var(--dark-sky);
+        transition: all 0.3s ease-in-out;
+        border-radius: 0 50% 50% 0;
+    }
+
+    &:hover {
+        color: var(--dark-blue);
+        box-shadow: 0px 0px 4px var(--dark-sky-shadow-alpha),
+            0px 0px 8px var(--dark-sky-shadow-alpha),
+            0px 0px 15px var(--dark-sky-shadow-alpha);
+
+        &::before {
+            width: 100%;
+            border-radius: 0;
+        }
+    }
+}
+
+.btnBack-orange_animation {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        background-color: var(--orange);
+        transition: all 0.3s ease-in-out;
+        border-radius: 0 50% 50% 0;
+    }
+
+    &:hover {
+        color: var(--dark-blue);
+        box-shadow: 0px 0px 4px var(--orange-shadow-alpha),
+            0px 0px 8px var(--orange-shadow-alpha),
+            0px 0px 15px var(--orange-shadow-alpha);
+
+        &::before {
+            width: 100%;
+            border-radius: 0;
+        }
+    }
+}
+
+.btn-solid {
+    color: var(--dark-blue);
+    background-color: var(--dark-sky);
+    transition: all 0.3s;
+
+    &:hover {
+        box-shadow: 0px 0px 4px var(--dark-sky-shadow-alpha),
+            0px 0px 8px var(--dark-sky-shadow-alpha),
+            0px 0px 15px var(--dark-sky-shadow-alpha), ;
+        background-color: var(--dark-blue);
+        color: var(--white);
+    }
+}
+
+// Theme button design ends hare 
