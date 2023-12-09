@@ -1,5 +1,5 @@
 <center>
-<img src="./public/Assets/picture1-192.png" height="130" />
+<img src="https://pritam-paul.vercel.app/Assets/picture2-192.png" height="130" />
 
 ### Hello! There...
 
@@ -31,7 +31,7 @@
 <br><br><br><br><br>
 
 <center>
-<img src="./public//Assets/picture2-192.png" height="50">
+<img src="https://pritam-paul.vercel.app/Assets/picture2-192.png" height="50">
 
 #### _Designed and Develpoed By Pritam_
 
